@@ -20,19 +20,18 @@ def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
     decoded = json.loads(json_line)
-    user = decoded["events"][0]['replyToken']
-    userText = decoded["events"][0]['message']['text']
+    user = decoded['originalDetectlntentRequest']['payload']['data']['replytoken']
+    userText = decoded['queryResuit']['intent']['displayName']
     #sendText(user,userText)
     if ( userText == 'สวัสดี') :
-     sendText(user,'ดี')
+        sendText(user,'ดี')
     elif ( userText == 'น่ารักจรุม') :
-     sendText(user,'เขิลเลยยย')
+        sendText(user,'เขิลเลยยย')
     else :
-     sendText(user,'ขอโทษนะเราไม่เข้าใจ.)
+        sendText(user,'ขอโทษนะเราไม่เข้าใจ.)
     return '',200
               
-                 
-def sendText(user, text):
+ def sendText(user, text):
   LINE_API = 'https://api.line.me/v2/bot/message/reply'
   headers = {
     'Content-Type': 'application/json; charset=UTF-8',
