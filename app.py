@@ -24,9 +24,9 @@ def callback():
     userText = decoded['queryResult']['intent']['displayName']
    if (userText == 'วันสำคัญทางพระพุทธศาสนา มีวันอะไรบ้าง') :
        sendText(user,'วันมาฆบูชา ขึ้น 15 ค่ำ เดือน 3 วันวิสาขบูชา ขึ้น 15 ค่ำ เดือน 6 วันอาสาฬหบูชา ขึ้น 15 ค่ำ เดือน 8')
-   elif (userText == 'อริยสัจ 4 คืออะไร') :
+    elif (userText == 'อริยสัจ 4 คืออะไร') :
        sendText(user,'อริยสัจ 4 คื่อ หลักความจริง 4 ประการ ได้แก่ ทุกข์ สมุทัย นิโรธ มรรค')
-   else :
+    else :
        sendText(user'มีอะไรให้น้อง สาละ ช่วยมั้ย??')
     return '',200
               
